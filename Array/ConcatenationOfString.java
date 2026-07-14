@@ -1,4 +1,4 @@
-package Backend.DSA;
+package Backend.DSA.Array;
 
 public class ConcatenationOfString {
     //input ->  num=[1,2,1]
