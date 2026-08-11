@@ -16,7 +16,7 @@ public class CheckPallinndromeNum {
 
     public static void main(String[] args) {
         CheckPallinndromeNum obj=new CheckPallinndromeNum();
-        int num=123121;
+        int num=1211;
         System.out.println(obj.checkPallindrome(num));
     }
 }
