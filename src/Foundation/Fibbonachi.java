@@ -14,6 +14,6 @@ public class Fibbonachi {
     }
 
     public static void main(String[] args) {
-        fibbonachi(5);
+        fibbonachi(41);
     }
 }
