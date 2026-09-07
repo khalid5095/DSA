@@ -1,4 +1,4 @@
-package Array;
+package Sorting;
 
 public class CheckSorted {
     public static void checkSorted(int[] nums) {

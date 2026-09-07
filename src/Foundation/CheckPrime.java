@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class CheckPrime {
     static boolean checkPrime(int n){
         if (n<=1) return false;  // 0 and 1 is niether prime nor composite
-      //  for (int i=2; i<=n/2; i++){
-        for (int i=2; i*i<=n; i+=2){
+      // for (int i=2; i<=n/2; i++){
+        if (n==2) return true;
+        for (int i=3; i*i<=n; i+=2){
             if (n%i==0){
                 return false;
             }
