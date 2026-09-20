@@ -4,13 +4,13 @@ import java.lang.instrument.ClassDefinition;
 
 public class LargestFromArray {
     public static void main(String[] args) {
-        int[] nums={12,15,2,77,8,5};
-        int largest=Integer.MIN_VALUE;
-        for (int i:nums){
-            if (i>largest) {
-                largest = i;
+       int [] arr={12,3,18,5,21,13};
+       int largest=Integer.MIN_VALUE;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i]>largest){
+                largest=arr[i];
             }
         }
-        System.out.println(largest);
+        System.out.println("Largest Element: "+largest);
     }
 }

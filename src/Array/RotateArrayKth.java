@@ -17,8 +17,8 @@ public class RotateArrayKth {
         k=k%num.length;
         //right shift by k
         reverse(num,0,num.length-1);
-        reverse(num,0,k);
-        reverse(num,k+1, num.length-1);
+        reverse(num,0,k-1);
+        reverse(num,k, num.length-1);
 
         for (int i:num){
             System.out.print(i+"\t");

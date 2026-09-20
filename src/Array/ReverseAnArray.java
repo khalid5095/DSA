@@ -3,38 +3,32 @@ package Array;
 import java.util.Arrays;
 
 public class ReverseAnArray {
-    //reverse using another aray
-    public static void reverse(int[] nums,int[]rev){
-        for (int i=0;i<nums.length;i++){
-        rev[i]=nums[nums.length-1-i];
-    }
-        System.out.println("Original Array: "+Arrays.toString(nums));
-        System.out.println("Reversed Array: "+Arrays.toString(rev));
-}
-    // reverse and array without using another loop
-    public static void reverse2(int[] nums){
-        int start=0;
-        int end=nums.length-1;
-        /*for (int s = 0, e = nums.length - 1; s < e; s++, e--){
-            int temp=nums[s];
-            nums[s]=nums[e];
-            nums[e]=temp;
-        }*/
-        //same works as upper for loop
-        while (start<end){
-          //  FindAllDuplcatesCyclicSort.swap(nums, start, end);
-            int temp=nums[start];
-            nums[start]=nums[end];
-            nums[end]=temp;
-            start++;
-            end--;
+    //reverse array using another array
+    static void reverseArray(int [] arr,int [] reverse){
+        int j=0;
+        for (int i=arr.length-1; i>=0; i--){
+            reverse[j]=arr[i];
+            j++;
         }
-        System.out.println("Reversed Array: "+Arrays.toString(nums));
     }
+    // Reverse array without using another array
+    static void reverse(int [] arr){
+        int r=arr.length-1;
+        int temp;
+        for (int i = 0; i < r; i++) {
+            temp=arr[r];
+            arr[r]=arr[i];
+            arr[i]=temp;
+            r--;
+    }
+        }
     public static void main(String[] args) {
-        int [] nums={1,2,3,4,5,6,7,8,9};
-        int [] rev=new int[nums.length];
-        reverse(nums,rev);
-        reverse2(nums);
-}
+        int [] arr={12,3,5,7,9,18};
+//        int [] reverse=new int[arr.length];
+//        reverseArray(arr,reverse);
+      System.out.println("Orignal Array: "+Arrays.toString(arr));
+//        System.out.println("Reverse Array: "+Arrays.toString(reverse));
+        reverse(arr);
+        System.out.println(Arrays.toString(arr));
+    }
 }
